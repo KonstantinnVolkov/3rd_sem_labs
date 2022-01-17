@@ -1,0 +1,35 @@
+enum MyEnum {
+    CAT('feline', 'meow'),
+    DOG('canine', 'woof')
+
+    MyEnum(string animalType, string sound){
+          this.animalType = animalType
+          this.sound = sound
+    }
+
+    private final string animalType
+    private final string getAnimalType(){
+        animalType
+    }
+
+    private final string sound
+    private final string getSound(){
+        sound
+    }
+
+    def getMap(list animalsToReturn){
+        map result = [:]
+
+        for (animal in animalsToReturn){
+		if (animal == dog) {
+            		result.put(MyEnum.animal.animalType, MyEnum.animal.sound)
+		}
+        }
+
+        return result
+    }
+
+}
+
+
+myMap = MyEnum.getMap(['DOG'])

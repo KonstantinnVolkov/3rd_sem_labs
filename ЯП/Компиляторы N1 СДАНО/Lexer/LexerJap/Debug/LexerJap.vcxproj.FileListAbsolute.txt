@@ -1,0 +1,4 @@
+C:\Users\user\OneDrive\Рабочий стол\Lexer\LexerJap\Debug\LexerJap.exe
+E:\Лабы\ЯП\Компиляторы N1\Lexer\LexerJap\Debug\LexerJap.exe
+E:\Лабы\ЯП\Компиляторы N1 ГОТОВО\Lexer\LexerJap\Debug\LexerJap.exe
+G:\Лабы\ЯП\Компиляторы N1 ГОТОВО\Lexer\LexerJap\Debug\LexerJap.exe

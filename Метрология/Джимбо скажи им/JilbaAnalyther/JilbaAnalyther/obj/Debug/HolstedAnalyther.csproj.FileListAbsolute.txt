@@ -1,0 +1,16 @@
+C:\Users\ilyam\source\repos\HolstedAnalyther\bin\Debug\HolstedAnalyther.exe.config
+C:\Users\ilyam\source\repos\HolstedAnalyther\bin\Debug\HolstedAnalyther.exe
+C:\Users\ilyam\source\repos\HolstedAnalyther\bin\Debug\HolstedAnalyther.pdb
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther.csproj.AssemblyReference.cache
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\App.g.cs
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.cache
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.lref
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther.g.resources
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther.Properties.Resources.resources
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther.csproj.GenerateResource.cache
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther.csproj.CoreCompileInputs.cache
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther.exe
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\HolstedAnalyther.pdb
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\View\HolstedAnalyzerView.g.cs
+C:\Users\ilyam\source\repos\HolstedAnalyther\obj\Debug\View\HolstedAnalyzerView.baml

@@ -1,0 +1,50 @@
+func add(x, y int) int {
+    return x + y
+}
+func sub(x, y int) int {
+    return x - y
+}
+
+func mul(x, y int) int {
+    return x * y
+}
+
+func div(x, y int) int {
+    return x / y
+}
+
+func split(sum int) (x, y int) {
+    x = sum * 6 / 9
+    y = sum - x
+    return
+}
+
+func exchange(x, y string) (string, string) {
+    return y , x
+}
+
+func OddOrEv(u int) {
+    if u % 2 == 0 {
+        fmt.Println("Even")
+    } else {
+        fmt.Println("Odd")
+    }
+}
+func Simple() {
+    var i int
+    for i = 1; i <= 5; i++ {
+        fmt.Print(i)
+    }
+    fmt.Printf("\n")
+}
+func PosOrNeg(n int) {
+	if n > 0 {
+		fmt.Println("+")
+	}
+	if n == 0 {
+		fmt.Println("NULL")
+	}
+	if n < 0 {
+		fmt.Println("-")
+	}
+}

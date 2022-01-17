@@ -1,0 +1,103 @@
+program lab2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  TPNote = ^TNote;
+
+  TNote = record
+    num: Integer;
+    prev,next: TPNote;
+  end;
+
+var s: string;
+    n,cod: integer;
+    head,tail,t: tpnote;
+
+procedure AddRec(var Head, Tail: TPNote; num: Integer);
+var l,tmp: TPNote;
+begin
+  if Head = nil then
+  begin
+    tmp:=New(TPNote);
+    Head:=tmp;
+    Head^.Next:=nil;
+    Head^.Prev:=nil;
+  end
+  else
+  begin
+    tmp:=Head;
+    while tmp^.Next <> nil do
+      tmp:= tmp^.Next;
+
+    l:=tmp;
+    tmp:= New(TPNote);
+
+    l^.Next:=tmp;
+    tmp^.Prev:=l;
+    tmp^.Next:=nil;
+  end;
+
+  tail:=tmp;
+  tmp^.num:=num;
+end;
+
+procedure DelRec(var Head: TPNote; const Rec: TPNote);
+begin
+  if (Rec = Head) and (Rec^.Next = nil) then
+  begin
+    Dispose(Rec);
+    Head:=nil;
+  end
+  else
+  if Rec = Head then
+  begin
+    Head:= Rec^.Next;
+    Rec^.Next^.Prev:= nil;
+    Rec^.Next:= nil;
+    Dispose(Rec);
+  end
+  else
+  if Rec^.Next = nil then
+  begin
+    Rec^.Prev^.Next := nil;
+    Rec^.Prev := nil;
+    Dispose(Rec);
+  end
+  else
+  begin
+    Rec^.Prev^.Next:= Rec^.Next;
+    Rec^.Next^.Prev:= Rec^.Prev;
+    Rec^.Prev:= nil;
+    Rec^.Next:= nil;
+    Dispose(Rec);
+  end;
+end;
+
+begin
+  repeat
+    write('¬ведите номер (или f, чтобы закончить): ');
+    readln(S);
+
+    if S = 'f' then break;
+
+    val(S,n,cod);
+    if ((length(S) <> 3) and (length(S) <> 7)) or (cod <> 0) or (S[1] = '0') then writeln('try again')
+    else AddRec(head,tail,n);
+
+    writeln;
+  until false;
+
+  writeln(#13#10,'—писок справа налево: ',#13#10);
+  t:=tail;
+  repeat
+    write(t^.num,' -> ');
+    t:=t^.prev;
+  until t=nil;
+  readln;
+end.

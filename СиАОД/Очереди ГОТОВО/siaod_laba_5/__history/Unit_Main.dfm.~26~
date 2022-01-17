@@ -1,0 +1,131 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 531
+  ClientWidth = 688
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  DesignSize = (
+    688
+    531)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object LabelTickLength: TLabel
+    Left = 58
+    Top = 16
+    Width = 24
+    Height = 13
+    Alignment = taRightJustify
+    Caption = #1058#1072#1082#1090
+  end
+  object LabelThinkingTime: TLabel
+    Left = 11
+    Top = 67
+    Width = 71
+    Height = 13
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = #1054#1073#1076#1091#1084#1099#1074#1072#1085#1080#1077
+  end
+  object LabelThinkingTimeShow: TLabel
+    Left = 244
+    Top = 67
+    Width = 6
+    Height = 13
+    Caption = '1'
+  end
+  object LabelTickLengthShow: TLabel
+    Left = 244
+    Top = 16
+    Width = 6
+    Height = 13
+    Caption = '1'
+  end
+  object LabelAnswer: TLabel
+    Left = 304
+    Top = 276
+    Width = 29
+    Height = 13
+    Caption = #1050#1055#1044': '
+  end
+  object TrackBarTickLength: TTrackBar
+    Left = 88
+    Top = 16
+    Width = 150
+    Height = 45
+    Min = 1
+    PageSize = 1
+    Position = 1
+    TabOrder = 0
+    OnChange = TrackBarTickLengthChange
+  end
+  object TrackBarThinkingTime: TTrackBar
+    Left = 88
+    Top = 67
+    Width = 150
+    Height = 45
+    Min = 1
+    PageSize = 1
+    Position = 1
+    TabOrder = 1
+    OnChange = TrackBarThinkingTimeChange
+  end
+  object Memo1: TMemo
+    Left = 11
+    Top = 126
+    Width = 239
+    Height = 139
+    Lines.Strings = (
+      '3'
+      '1 2 3'
+      '3 3 4 5 6 4 2 1 5 3 4 '
+      '4 2 5 6 2 1 1 3 3 4'
+      '4 4 5 6 6 2 1 1 3 3 4 4'
+      '1 1 4 4 2 2 4 3 3 3 3 5 8'
+      '4 5 1 3 3 3 2 2 4 1 4 6'
+      '4 5 1 1 1 3 3 3 2 2 4 1 1')
+    ScrollBars = ssVertical
+    TabOrder = 2
+  end
+  object ButtonRun: TButton
+    Left = 19
+    Top = 271
+    Width = 94
+    Height = 25
+    Caption = #1047#1072#1087#1091#1089#1090#1080#1090#1100
+    TabOrder = 3
+    OnClick = ButtonRunClick
+  end
+  object ListBox1: TListBox
+    Left = 8
+    Top = 302
+    Width = 672
+    Height = 221
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Consolas'
+    Font.Style = []
+    ItemHeight = 13
+    ParentFont = False
+    ScrollWidth = 20000
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 128
+    Top = 271
+    Width = 75
+    Height = 25
+    Caption = #1055#1086#1096#1072#1075#1086#1074#1086
+    TabOrder = 5
+    OnClick = Button1Click
+  end
+end

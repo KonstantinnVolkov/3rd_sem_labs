@@ -1,0 +1,243 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"time"
+)
+
+func add(x, y int) int {
+	return x + y
+}
+func sub(x, y int) int {
+	return x - y
+}
+
+func mul(x, y int) int {
+	return x * y
+}
+
+func div(x, y int) int {
+	return x / y
+}
+
+func split(sum int) (x, y int) {
+	x = sum * 6 / 9
+	y = sum - x
+	return
+}
+
+func exchange(x, y string) (string, string) {
+	return y, x
+}
+
+func OddOrEv(u int) {
+	if u%2 == 0 {
+		fmt.Println("Even")
+	} else {
+		fmt.Println("Odd")
+	}
+}
+
+func sqrt(x float64) (z float64) {
+	if x < 0 {
+		x = -x
+	}
+	z = math.Sqrt(x)
+	return
+}
+
+func pow(x, n, lim float64) float64 {
+	if v := math.Pow(x, n); v < lim {
+		return v
+	}
+	return lim
+}
+
+func Simple() {
+	var i int
+	for i = 1; i <= 5; i++ {
+		fmt.Print(i)
+	}
+	fmt.Printf("\n")
+}
+
+func fact(n int) int {
+	if n == 0 {
+		return 1
+	}
+	return n * fact(n-1)
+}
+
+func RectPerNArea(a int, b int) {
+	var perimetr, area int
+	perimetr = 2 * (a + b)
+	fmt.Print("Perimetr: ", perimetr)
+	fmt.Print("\t")
+	area = a * b
+	fmt.Print("Area: ", area)
+	fmt.Println()
+}
+
+func PosOrNeg(n int) {
+	if n > 0 {
+		fmt.Println("+")
+	}
+	if n == 0 {
+		fmt.Println("NULL")
+	}
+	if n < 0 {
+		fmt.Println("-")
+	}
+}
+
+func LeapYear(year int) string {
+	leapFlag := 0
+	if year%4 == 0 {
+		if year%100 == 0 {
+			if year%400 == 0 {
+				leapFlag = 1
+			} else {
+				leapFlag = 0
+			}
+		} else {
+			leapFlag = 1
+		}
+	} else {
+		leapFlag = 0
+	}
+
+	if leapFlag == 1 {
+		return "Yes"
+	} else {
+		return "No"
+	}
+}
+
+func WriteNumAsFrom0To10(num int) (str string) {
+	switch num {
+	case 0:
+		str = "Zero"
+	case 1:
+		str = "One"
+	case 2:
+		str = "Two"
+	case 3:
+		str = "Three"
+	case 4:
+		str = "Four"
+	case 5:
+		str = "Five"
+	case 6:
+		str = "Six"
+	case 7:
+		str = "Seven"
+	case 8:
+		str = "Eight"
+	case 9:
+		str = "Nine"
+	case 10:
+		str = "Ten"
+	default:
+		str = "It's more than Ten"
+	}
+	return
+}
+
+func NoonTime() (str string) {
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		str = "It's before noon"
+	case t.Hour() == 12:
+		str = "It's noon"
+	default:
+		str = "It's after noon"
+	}
+	return
+}
+
+func FIOage(x, y int, firstn, ln string) (int, string) {
+	var z int = x + y
+	var full = firstn + " " + ln
+	return z, full
+}
+
+func Useless(n int) (sum int) {
+	sum = 0
+	switch n {
+	case 1:
+		{
+			for i := 0; i <= n; i++ {
+				sum = sum + n*50*i
+			}
+		}
+	case 2:
+		{
+			for i := 0; i <= n; i++ {
+				sum = sum + n*40*i
+			}
+		}
+	case 3:
+		{
+			for i := 0; i <= n; i++ {
+				sum = sum + n*30*i
+			}
+		}
+	case 4:
+		{
+			for i := 0; i <= n; i++ {
+				sum = sum + n*20*i
+			}
+		}
+	case 5:
+		{
+			for i := 0; i <= n; i++ {
+				sum = sum + n*10*i
+			}
+		}
+	default:
+		sum = 0
+	}
+	return
+}
+
+func Last(num int) (str string) {
+	if num < 0 {
+		str = "is negative"
+	} else if num < 10 {
+		str = "has 1 digit"
+	} else {
+		str = "has multiple digits"
+	}
+	return
+}
+
+func main() {
+	fmt.Println(add(56, 2))
+	fmt.Println(sub(59, 5))
+	fmt.Println(mul(62, 10))
+	fmt.Println(div(65, 20))
+	fmt.Println(split(65))
+	q, w := exchange("my", "live")
+	fmt.Println(q, w)
+	OddOrEv(69)
+	fmt.Printf("%f\n", sqrt(6))
+	fmt.Printf("%f i\n", sqrt(-10))
+	fmt.Println(pow(3, 2, 100))
+	fmt.Println(pow(3, 6, 70))
+	Simple()
+	fmt.Println(fact(8))
+	RectPerNArea(135, 96)
+	PosOrNeg(0)
+	fmt.Println("1912 Leap? ", LeapYear(1912))
+	var num int = 5
+	fmt.Printf("Write %d as ", num)
+	fmt.Println(WriteNumAsFrom0To10(num))
+	fmt.Println(NoonTime())
+	var age, name = FIOage(12, 23, "John", "Griffin")
+	fmt.Println(age)
+	fmt.Println(name)
+	fmt.Println(Useless(5))
+	fmt.Println("120", Last(120))
+}

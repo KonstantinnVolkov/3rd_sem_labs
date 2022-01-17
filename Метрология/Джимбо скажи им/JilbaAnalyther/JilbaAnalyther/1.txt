@@ -1,0 +1,11 @@
+class Example {
+   static void main(string[] args) {
+      def x = 655
+      x -= 234
+      println('Hello World', x);  
+   }
+
+   static void foo(string str){
+      println('Hello World', str);  
+   }
+}

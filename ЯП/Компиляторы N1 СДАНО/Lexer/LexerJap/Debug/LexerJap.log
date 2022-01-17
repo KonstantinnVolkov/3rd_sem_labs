@@ -1,0 +1,4 @@
+﻿  LexerJap.cpp
+G:\Лабы\ЯП\Компиляторы N1 ГОТОВО\Lexer\LexerJap\LexerJap.cpp(70,10): warning C4101: isCorrect: неиспользованная локальная переменная
+G:\Лабы\ЯП\Компиляторы N1 ГОТОВО\Lexer\LexerJap\LexerJap.cpp(83,19): warning C4018: <: несоответствие типов со знаком и без знака
+  LexerJap.vcxproj -> G:\Лабы\ЯП\Компиляторы N1 ГОТОВО\Lexer\LexerJap\Debug\LexerJap.exe

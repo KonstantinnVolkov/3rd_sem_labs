@@ -1,0 +1,188 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 428
+  ClientWidth = 902
+  Color = clBlack
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  DesignSize = (
+    902
+    428)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object CPDLbl: TLabel
+    Left = 535
+    Top = 112
+    Width = 49
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    AutoSize = False
+    Caption = #1050#1055#1044':'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object CPD: TLabel
+    Left = 705
+    Top = 113
+    Width = 49
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object WTLbl: TLabel
+    Left = 535
+    Top = 207
+    Width = 147
+    Height = 25
+    Anchors = [akRight, akBottom]
+    AutoSize = False
+    Caption = #1042#1088#1077#1084#1103' '#1087#1088#1086#1089#1090#1086#1103':'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object waitTime: TLabel
+    Left = 705
+    Top = 208
+    Width = 121
+    Height = 25
+    Anchors = [akRight, akBottom]
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object totalLbl: TLabel
+    Left = 535
+    Top = 159
+    Width = 147
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    AutoSize = False
+    Caption = #1042#1088#1077#1084#1077#1085#1080' '#1074#1089#1077#1075#1086':'
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object total: TLabel
+    Left = 705
+    Top = 160
+    Width = 137
+    Height = 25
+    Anchors = [akLeft, akBottom]
+    AutoSize = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object initButton: TButton
+    Left = 272
+    Top = 296
+    Width = 225
+    Height = 33
+    Caption = #1042#1099#1087#1086#1083#1085#1080#1090#1100
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = initButtonClick
+  end
+  object table: TStringGrid
+    Left = 40
+    Top = 112
+    Width = 457
+    Height = 161
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    ColCount = 1
+    DefaultColWidth = 20
+    DefaultRowHeight = 20
+    FixedCols = 0
+    RowCount = 1
+    FixedRows = 0
+    TabOrder = 1
+  end
+  object timeBox: TComboBox
+    Left = 40
+    Top = 64
+    Width = 97
+    Height = 30
+    Color = clBlack
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    Text = #1058#1072#1082#1090#1099
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10')
+  end
+  object inputBox: TComboBox
+    Left = 157
+    Top = 64
+    Width = 140
+    Height = 30
+    Color = clBlack
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    Text = #1042#1088#1077#1084#1103' '#1074#1074#1086#1076#1072
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10')
+  end
+end

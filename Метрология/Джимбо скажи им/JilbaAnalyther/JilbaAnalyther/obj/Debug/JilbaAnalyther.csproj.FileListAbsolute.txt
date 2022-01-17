@@ -1,0 +1,48 @@
+C:\Users\ilyam\source\repos\JilbaAnalyther\bin\Debug\HolstedAnalyther.exe.config
+C:\Users\ilyam\source\repos\JilbaAnalyther\bin\Debug\HolstedAnalyther.exe
+C:\Users\ilyam\source\repos\JilbaAnalyther\bin\Debug\HolstedAnalyther.pdb
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.AssemblyReference.cache
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\View\JilbaAnalyzerView.g.cs
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\App.g.cs
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.cache
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.lref
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\View\JilbaAnalyzerView.baml
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\HolstedAnalyther.g.resources
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\HolstedAnalyther.Properties.Resources.resources
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.GenerateResource.cache
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.CoreCompileInputs.cache
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\HolstedAnalyther.exe
+C:\Users\ilyam\source\repos\JilbaAnalyther\obj\Debug\HolstedAnalyther.pdb
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\bin\Debug\HolstedAnalyther.exe.config
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\bin\Debug\HolstedAnalyther.exe
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\bin\Debug\HolstedAnalyther.pdb
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.AssemblyReference.cache
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\View\JilbaAnalyzerView.g.cs
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\App.g.cs
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.cache
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.lref
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\View\JilbaAnalyzerView.baml
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.g.resources
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.Properties.Resources.resources
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.GenerateResource.cache
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.CoreCompileInputs.cache
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.exe
+D:\My_projects\Java\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.pdb
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\bin\Debug\HolstedAnalyther.exe.config
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\bin\Debug\HolstedAnalyther.exe
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\bin\Debug\HolstedAnalyther.pdb
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.AssemblyReference.cache
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\View\JilbaAnalyzerView.g.cs
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\App.g.cs
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.cache
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther_MarkupCompile.lref
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\View\JilbaAnalyzerView.baml
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.g.resources
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.Properties.Resources.resources
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.GenerateResource.cache
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\JilbaAnalyther.csproj.CoreCompileInputs.cache
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.exe
+E:\Лабы\Метрология\Джимбо скажи им\JilbaAnalyther\JilbaAnalyther\obj\Debug\HolstedAnalyther.pdb

@@ -1,0 +1,4 @@
+﻿  Source.c
+G:\Лабы\ЯП\л.р 1\L.R.1\N24\Project1\Project1\Source.c(20,7): warning C4013: srand: нет определения; предполагается "extern" с возвратом типа "int"
+G:\Лабы\ЯП\л.р 1\L.R.1\N24\Project1\Project1\Source.c(45,26): warning C4013: rand: нет определения; предполагается "extern" с возвратом типа "int"
+  Project1.vcxproj -> G:\Лабы\ЯП\л.р 1\L.R.1\N24\Project1\Debug\Project1.exe

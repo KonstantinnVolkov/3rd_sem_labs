@@ -1,0 +1,416 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids;
+
+type
+  TForm1 = class(TForm)
+    CPDLbl: TLabel;
+    CPD: TLabel;
+    WTLbl: TLabel;
+    waitTime: TLabel;
+    totalLbl: TLabel;
+    total: TLabel;
+    initButton: TButton;
+    table: TStringGrid;
+    timeBox: TComboBox;
+    inputBox: TComboBox;
+    procedure FormCreate(Sender: TObject);
+    procedure initButtonClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+  TProcessArray = Array of Integer;
+  processLink = ^TProcess;
+  TProcess = record
+    pos: Integer;
+    number: Integer;
+    process: TProcessArray;
+    priority: Integer;
+    input: Integer;
+    next: processLink
+  end;
+  queueLink = ^TQueue;
+  TQueue = record
+    current: processLink;
+    first: processLink;
+  end;
+  CPUlink = ^TProcessing;
+  TProcessing = record
+    queue: queueLink;
+    time: Integer;
+    input: Integer;
+    current: processLink;
+    CPD: Integer;
+    downTime: Integer;
+    fullTime: Integer;
+  end;
+
+const
+
+  PROCESS_TABLE_0: array[0..8] of Integer = (3,2,4,3,4,5,3,2,1);
+  PROCESS_TABLE_1: array[0..9] of Integer = (2,1,6,3,4,5,3,2,1,4);
+  PROCESS_TABLE_2: array[0..10] of Integer = (4,1,3,4,5,3,2,2,3,2,2);
+  PROCESS_TABLE_3: array[0..10] of Integer = (6,3,3,3,2,1,2,3,4,5,6);
+  PROCESS_TABLE_4: array[0..10] of Integer = (2,4,4,3,3,2,1,6,5,3,3);
+  PROCESS_TABLE_5: array[0..11] of Integer = (3,3,4,3,5,4,3,2,1,6,3,2);
+
+var
+  CPU: CPUlink;
+  Form1: TForm1;
+  neededTime: Integer = 0;
+
+implementation
+
+{$R *.dfm}
+
+procedure cleanGrid(SG: TStringGrid);
+  var i: Integer;
+  begin
+    for i := 2 to SG.ColCount - 1 do
+      SG.Cols[i].Text := '';
+    SG.ColCount := 2;
+  end;
+
+procedure initGrid(SG: TStringGrid);
+  var i: Integer;
+  begin
+    SG.ColCount := 2;
+    SG.FixedCols := 1;
+    SG.RowCount := 6;
+    for i := 0 to 5 do
+      begin
+        SG.Cells[0, i] := IntToStr(i + 1);
+        SG.Cells[1, i] := '|';
+      end;
+  end;
+
+procedure addColsInTable(const count: Integer);
+  var i: Integer;
+  begin
+  with Form1.table do
+    begin
+      ColCount := ColCount + count + 1;
+      for i := 0 to RowCount - 1 do
+        Cells[ColCount - 1, i] := '||';
+    end;
+  end;
+
+procedure addMarker(const marker: string; const number: Integer; const isCPU: boolean);
+  var pos: Integer;
+  begin
+    with Form1.table do
+      begin
+        pos := 0;
+        while (Cells[pos, number] <> '') and (Pos < ColCount) do
+          Inc(pos);
+        if pos < ColCount then
+        begin
+          Cells[pos, number] := marker;
+          if isCPU then
+            Cells[pos, number] := Cells[pos, number] + '*';
+        end;
+      end;
+  end;
+
+function copyArray(const number: Integer): TProcessArray;
+  var i: Integer;
+  begin
+    case number of
+      0:begin
+          SetLength(Result, Length(PROCESS_TABLE_0));
+          for i := 0 to Length(PROCESS_TABLE_0) - 1 do
+            begin
+              Result[i] := PROCESS_TABLE_0[i];
+              inc(neededTime, PROCESS_TABLE_0[i]);
+            end;
+        end;
+
+      1:begin
+          SetLength(Result, Length(PROCESS_TABLE_1));
+          for i := 0 to Length(PROCESS_TABLE_1) - 1 do
+            begin
+              Result[i] := PROCESS_TABLE_1[i];
+              inc(neededTime, PROCESS_TABLE_1[i]);
+            end;
+        end;
+
+      2:begin
+          SetLength(Result, Length(PROCESS_TABLE_2));
+          for i := 0 to Length(PROCESS_TABLE_2) - 1 do
+            begin
+              Result[i] := PROCESS_TABLE_2[i];
+              inc(neededTime, PROCESS_TABLE_2[i]);
+            end;
+        end;
+
+      3:begin
+          SetLength(Result, Length(PROCESS_TABLE_3));
+          for i := 0 to Length(PROCESS_TABLE_3) - 1 do
+            begin
+              Result[i] := PROCESS_TABLE_3[i];
+              inc(neededTime, PROCESS_TABLE_3[i]);
+            end;
+        end;
+
+      4:begin
+          SetLength(Result, Length(PROCESS_TABLE_4));
+          for i := 0 to Length(PROCESS_TABLE_4) - 1 do
+            begin
+              Result[i] := PROCESS_TABLE_4[i];
+              inc(neededTime, PROCESS_TABLE_4[i]);
+            end;
+        end;
+
+      5:begin
+          SetLength(Result, Length(PROCESS_TABLE_5));
+          for i := 0 to Length(PROCESS_TABLE_4) - 1 do
+            begin
+              Result[i] := PROCESS_TABLE_5[i];
+              inc(neededTime, PROCESS_TABLE_5[i]);
+            end;
+        end;
+    end;
+  end;
+
+function createQueue(): queueLink;
+  var process, tmp: processLink;
+      i: Integer;
+  begin
+    New(Result);
+    New(process);
+    Result^.first := process;
+    for i := 0 to 5 do
+      begin
+        process^.number := i;
+        process^.pos := 0;
+        process^.process := copyArray(i);
+        process^.input := 0;
+        if i <> 5 then
+          begin
+            New(tmp);
+            process^.next := tmp;
+            process := tmp;
+          end
+        else
+          process^.next := nil;
+      end;
+
+    process := Result^.first;
+    process^.priority := 1;
+    for i := 1 to 2 do
+      begin
+        process := process^.next;
+        process^.priority := 1;
+      end;
+    for i := 1 to 3 do
+      begin
+        process := process^.next;
+        process^.priority := 2;
+      end;
+  end;
+
+function createCPU(const time, input: Integer): CPUlink;
+  begin
+    New(Result);
+    Result^.queue := createQueue;
+    Result^.time := time;
+    Result^.input := input;
+    Result^.current := nil;
+    Result^.downTime := 0;
+    Result^.fullTime := 0;
+  end;
+
+function checkProcess(const process: processLink): Boolean;
+  begin
+    Result := False;
+    if process^.input = 0 then
+      Result := True;
+  end;
+
+function findMaxPriorytyItem(var queue: queueLink): processLink;
+  var process: processLink;
+  begin
+    process := queue^.first;
+    while process <> nil do
+      begin
+        if checkProcess(process) then
+          if (Result = nil) or (Result^.priority > process^.priority) then
+            Result := process
+          else if (Result^.priority = process^.priority) and (CPU^.current <> nil) and (process = CPU^.current^.next) then
+            Result := process;
+        process := process^.next;
+      end;
+    queue^.current := Result;
+  end;
+
+procedure deleteFromQueue(var process: processLink);
+  var tmp: processLink;
+  begin
+    tmp := CPU^.queue^.first;
+    if tmp = process then
+      CPU^.queue^.first := process^.next
+    else
+      begin
+        while tmp^.next <> process do
+          begin
+            tmp := tmp^.next;
+          end;
+        tmp^.next := process^.next;
+      end;
+    Dispose(process);
+  end;
+
+procedure cpuWait(const waitTime: Integer);
+  var i: integer;
+  begin
+    with CPU^ do
+      for i := 1 to waitTime do
+        begin
+          inc(downTime);
+          if current <> nil then
+            if current^.input <> 0 then
+              begin
+                Dec(current^.input);
+                addMarker('Â', current^.number, true);
+              end
+            else
+              addMarker('Î', current^.number, true);
+        end;
+  end;
+
+procedure cpuProcess();
+  var i: Integer;
+  begin
+    with CPU^ do
+      begin
+        if current <> nil then
+          begin
+            for i := time downto 1 do
+              begin
+                if current^.process[current^.pos] = 0 then
+                  begin
+                    if current^.pos < Length(current^.process) - 1 then
+                      begin
+                        inc(current^.pos);
+                        current^.input := input;
+                        cpuWait(i);
+                        Break;
+                      end
+                    else
+                      begin
+                        deleteFromQueue(current);
+                        current := nil;
+                        Break;
+                      end;
+                  end
+                else
+                  begin
+                    Dec(current^.process[current^.pos]);
+                    addMarker('Ï', current^.number, false);
+                  end;
+
+              end;
+
+            if (current <> nil) and (current^.process[current^.pos] = 0) then
+              if current^.pos < Length(current^.process) - 1 then
+                begin
+                  inc(current^.pos);
+                  current^.input := input;
+                end
+              else
+                begin
+                  deleteFromQueue(current);
+                  current := nil;
+                end;
+
+          end
+        else
+          cpuWait(time);
+        Inc(fullTime, time);
+      end;
+  end;
+
+procedure queueDecInput;
+  var process: processLink;
+      i: Integer;
+      isCPUWaiting: Boolean;
+  begin
+    process := CPU^.queue^.first;
+    while process <> nil do
+      begin
+        if (CPU^.current = nil) then
+          isCPUWaiting := True
+        else
+          isCPUWaiting := False;
+        if process^.input > 0 then
+          for i := CPU^.time downto 1 do
+            if process^.input <> 0 then
+              begin
+                Dec(process^.input);
+                addMarker('Â', process^.number, isCPUWaiting);
+              end
+            else
+              addMarker('Î', process^.number, isCPUWaiting);
+        process := process^.next;
+      end;
+  end;
+
+procedure queueWait;
+  var process: processLink;
+      i: Integer;
+  begin
+    process := CPU^.queue^.first;
+    while process <> nil do
+      begin
+        if (process^.input = 0) and (CPU^.current <> process) then
+          for i := CPU^.time downto 1 do
+            addMarker('Î', process^.number, false);
+        process := process^.next;
+      end;
+  end;
+
+procedure beginProcessing(const time, input: Integer);
+  begin
+    Dispose(CPU);
+    CPU := createCPU(time, input);
+    with CPU^ do
+      while queue^.first <> nil do
+        begin
+          addColsInTable(time);
+          current := findMaxPriorytyItem(queue);
+          queueDecInput;
+          cpuProcess;
+          queueWait;
+        end;
+    Form1.CPD.Caption := IntToStr(Round(neededTime / CPU^.fullTime * 100)) + '%';
+    Form1.waitTime.Caption := IntToStr(CPU^.downTime);
+    Form1.total.Caption := IntToStr(neededTime);
+  end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+  begin
+    initGrid(table);
+  end;
+
+procedure TForm1.initButtonClick(Sender: TObject);
+  var time, input, err: Integer;
+  begin
+    neededTime := 0;
+    cleanGrid(table);
+    CPD.Caption := '';
+    waitTime.Caption := '';
+    Val(timeBox.Text, time, err);
+    Val(inputBox.Text, input, err);
+    if (err = 0) then
+      beginProcessing(time, input);
+  end;
+
+
+
+end.

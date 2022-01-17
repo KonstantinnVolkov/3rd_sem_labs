@@ -1,0 +1,4 @@
+﻿  Source.c
+G:\Лабы\ЯП\л.р 6 СДАНО\N14\Project1\Project1\Source.c(63,26): warning C4020: task: слишком много фактических параметров
+G:\Лабы\ЯП\л.р 6 СДАНО\N14\Project1\Project1\Source.c(88,39): warning C4029: объявленный список формальных параметров отличается от объявления
+  Project1.vcxproj -> G:\Лабы\ЯП\л.р 6 СДАНО\N14\Project1\x64\Debug\Project1.exe

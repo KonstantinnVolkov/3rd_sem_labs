@@ -1,0 +1,34 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids;
+
+type
+  TForm1 = class(TForm)
+    CPDLbl: TLabel;
+    CPD: TLabel;
+    WTLbl: TLabel;
+    waitTime: TLabel;
+    totalLbl: TLabel;
+    total: TLabel;
+    initButton: TButton;
+    table: TStringGrid;
+    timeBox: TComboBox;
+    inputBox: TComboBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+end.

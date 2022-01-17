@@ -1,0 +1,53 @@
+func BinHexToDec(num int) {
+	len := 7
+	base := 8
+	res := 0
+	temp := 0
+	num1 := 0
+	if base == 2 {
+		for a := 0; a < 3; a += 1 {
+			for i := 0; i <= len-1; i += 1 {
+				if num == '1' {
+					temp = 1
+					for j := 0; j <= len-1-i; j += 1 {
+						temp = temp * base
+					}
+					res = res + temp
+				}
+			}
+		}
+	} else if base == 8 {
+		for i := 0; i <= len-1; i += 1 {
+			num1 = 0
+			switch num {
+			case 000:
+				num1 = 0
+			case 001:
+				num1 = 1
+			case 010:
+				num1 = 2
+			case 011:
+				num1 = 3
+			case 100:
+				num1 = 4
+			case 101:
+				num1 = 5
+			case 110:
+				num1 = 6
+			case 111:
+				for j := 0; j <= len-i; j += 1 {
+					num1 = 7
+				}
+				default:
+					num1 = 15	
+			}
+			temp = 1
+			for j := 0; j <= len-i; j += 1 {
+				temp = temp * base
+			}
+			res = res + temp*num1
+		}
+	}
+	fmt.Println("Num:", num1)
+	fmt.Println("Result:", res)
+}

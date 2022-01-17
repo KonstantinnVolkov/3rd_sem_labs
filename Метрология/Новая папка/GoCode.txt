@@ -1,0 +1,42 @@
+func TheBestFunc() {
+	xxx := 5
+	tmp := 1
+	trash := 3
+	for i := 0; i < xxx; i += 1 {
+
+		for j := 1; j <= xxx-i; j += 1 {
+			fmt.Print(" ")
+		}
+
+		for k := 0; k <= i; k += 1 {
+
+			if k == 0 || i == 0 {
+				tmp = 1
+			} else {
+				tmp = tmp * ( i - k + 1 ) / k
+			}
+
+			fmt.Printf(" %d", tmp )
+			fmt.Printf(" %d", k)	
+
+		}
+		fmt.Println("")
+		bntu := 14
+		sum := 0
+		fact := 1
+
+		for n := 1; n <= 5; n += 1 {
+			sum += i 
+			fact *= i
+		}
+
+    	inp := ReadLine()
+	inp += 1	
+    fmt.Print(inp)
+	}
+
+}
+
+func main() {
+	TheBestFunc()
+}

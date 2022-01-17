@@ -1,0 +1,141 @@
+0:0:0
+Vendor ID: 32902, Intel Corporation
+Девайс ИД Device ID: 4663, 440FX - 82441FX PMC [Natoma]
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+Отсутствую баз. регистры вв           Задание 5
+
+Cashe Line Size data: 0
+Размер строки кэша: 0
+---------------------------------------------------
+0:1:0
+Vendor ID: 32902, Intel Corporation
+Девайс ИД Device ID: 28672, 82371SB PIIX3 ISA [Natoma/Triton II]
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+Отсутствую баз. регистры вв           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------
+0:1:1
+Vendor ID: 32902, Intel Corporation
+Девайс ИД Device ID: 28945, 82371AB/EB/MB PIIX4 IDE
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+	Регистр ввода/вывода 4: 0xd000, I/O space register
+           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------
+0:2:0
+Vendor ID: 5549, VMware
+Девайс ИД Device ID: 1029, SVGA II Adapter
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+	Регистр ввода/вывода 0: 0xd010, I/O space register
+           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------
+0:3:0
+Vendor ID: 32902, Intel Corporation
+Девайс ИД Device ID: 4110, 82540EM Gigabit Ethernet Controller
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+	Регистр ввода/вывода 2: 0xd020, I/O space register
+           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------
+0:4:0
+Vendor ID: 33006, InnoTek Systemberatung GmbH
+Девайс ИД Device ID: -13570, unknown device
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+	Регистр ввода/вывода 0: 0xd040, I/O space register
+           Задание 5
+
+Cashe Line Size data: 0
+Размер строки кэша: 0
+---------------------------------------------------
+0:5:0
+Vendor ID: 32902, Intel Corporation
+Девайс ИД Device ID: 9237, 82801AA AC'97 Audio Controller
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+	Регистр ввода/вывода 0: 0xd100, I/O space register
+	Регистр ввода/вывода 1: 0xd200, I/O space register
+           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------
+0:6:0
+Vendor ID: 4203, Apple Inc.
+Девайс ИД Device ID: 0063, KeyLargo/Intrepid USB
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+Отсутствую баз. регистры вв           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------
+0:7:0
+Vendor ID: 32902, Intel Corporation
+Девайс ИД Device ID: 28947, 82371AB/EB/MB PIIX4 ACPI
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+Отсутствую баз. регистры вв           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------
+0:d:0
+Vendor ID: 32902, Intel Corporation
+Девайс ИД Device ID: 10281, 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+
+Not a bridge
+
+           Задание 3
+Базовые регистры ввода/вывода:
+	Регистр ввода/вывода 0: 0xd240, I/O space register
+	Регистр ввода/вывода 1: 0xd248, I/O space register
+	Регистр ввода/вывода 2: 0xd250, I/O space register
+	Регистр ввода/вывода 3: 0xd258, I/O space register
+	Регистр ввода/вывода 4: 0xd260, I/O space register
+           Задание 5
+
+Cashe Line Size data: 1
+Размер строки кэша: 1
+---------------------------------------------------

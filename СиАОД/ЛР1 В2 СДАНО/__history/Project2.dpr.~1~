@@ -1,0 +1,71 @@
+program Project2;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type
+  ptr = ^TElement;
+  TElement = record
+    next, prev: ptr;
+    numberOfPlayer: integer;
+  end;
+
+  TList = record
+    head, tail: ptr;
+  end;
+
+var
+  list: TList;
+  playersAmount: integer;
+  k: Integer;
+
+procedure addNewEl (var curr: ptr);
+begin
+  if list.head = nil then
+  begin
+    list.head := curr;
+    list.tail := curr;
+    curr.next := nil;
+    curr.prev := nil;
+    exit;
+  end;
+
+  curr.next := nil;
+  curr.prev := list.tail;
+  list.tail.next := curr;
+  list.tail := curr;
+end;
+
+procedure createList(playersAmount: integer);
+var
+  curr,tmp: ptr;
+  i: Integer;
+
+begin
+  List.head := nil;
+  List.tail := nil;
+  new(curr);
+
+  for i := 1 to playersAmount do
+  begin
+    tmp := curr;
+    new(curr);
+    curr.numberOfPlayer := i;
+    addNewEl(curr);
+    tmp.next := curr;
+    curr.prev := tmp;
+  end;
+
+end;
+
+begin
+  writeln('Введите количество игроков');
+  Readln(playersAmount);
+  writeln('В счиалочке удаляется каждый k-тый игрок, введите к');
+  Readln(k);
+  Writeln('------------------------------------------------------');
+end.

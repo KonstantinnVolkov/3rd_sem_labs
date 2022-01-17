@@ -1,0 +1,4 @@
+C:\Users\volko\OneDrive\Рабочий стол\Универ\яп\LR1\Debug\LR1.exe
+C:\Users\volko\OneDrive\Рабочий стол\Универ\яп\LR1\Debug\LR1.pdb
+G:\Лябы ЯП\л.р 1\LR2\N7\Debug\LR1.exe
+G:\Лабы\ЯП\л.р 1\LR2\N7\Debug\LR1.exe
